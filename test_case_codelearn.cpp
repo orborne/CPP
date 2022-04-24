@@ -1,16 +1,45 @@
 #include "iostream"
 using namespace std;
-class MyClass {
+class test_case_codelearn
+{
+private:
+    /* data */
 public:
-    static int x;
-    
+    int * arr;
+    int n;
+    ~test_case_codelearn(){
+        cout << "Destructor called" << endl;
+        delete [] arr;
+    }
+    // test_case_codelearn(/* args */);
+    // ~test_case_codelearn();
 };
-int MyClass::x = 10;
+void someFunction1(){
+    test_case_codelearn a;
+    a.n = 5;
+    a.arr = new int[a.n];
+    // some code
+    
+}
+void someFunction2(){
+    test_case_codelearn a;
+    a.n = 5;
+    a.arr = new int[a.n];
+    // some code
+   
+}
+
+// test_case_codelearn::test_case_codelearn(/* args */)
+// {
+// }
+
+// test_case_codelearn::~test_case_codelearn()
+// {
+// }
+
 int main(int argc, char **argv)
 {
-    MyClass m1;
-    MyClass m2;
-    m1.x = 20;
-    cout << m1.x << "  " << m2.x << endl;
+    someFunction1();
+    someFunction2();
     return 0;
 }
